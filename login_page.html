@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f4ef; padding: 50px; }
+        .login-box { max-width: 300px; margin: auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .login-box input { width: 90%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .login-box button { width: 100%; padding: 10px; background: #a47e4e; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+        .login-box button:hover { background: #8c6b3e; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter username">
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="login()">Login</button>
+    </div>
+    <script>
+        function login() {
+            const password = document.getElementById('password').value;
+            if (password === "Wdr_p3xl") {
+                window.location.href = "index.html"; // Redirect to protected page
+            } else {
+                alert("Password yang anda masukan salah!");
+            }
+        }
+    </script>
+</body>
+</html>

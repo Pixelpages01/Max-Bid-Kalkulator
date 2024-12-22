@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5ebe0;
+  color: #4e3620;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #c8a165;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #a47e4e;
+}
+#downloadPdfBtn {
+  padding: 5px 7px;
+  font-size: 10px ;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  font-size:9px;
+  
+}
+
+table th {
+  background-color: #f5ebe0;
+  color: #4e3620;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f9f3ed;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
