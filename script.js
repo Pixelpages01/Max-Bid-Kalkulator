@@ -24,7 +24,7 @@ document.getElementById("calculateBtn").addEventListener("click", () => {
  <td>Rp${maxBid.toFixed(0).toLocaleString('id-ID')}</td>
  `;
  
- if (tbody.children.length >= 10) {
+ if (tbody.children.length >= 50) {
  tbody.removeChild(tbody.firstElementChild); // Hapus baris pertama jika lebih dari 10
  }
  tbody.appendChild(row);
