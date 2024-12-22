@@ -44,5 +44,13 @@
  		 <tbody></tbody>
   </table>
   <button id="downloadPdfBtn">Unduh</button>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF();
+    pdf.text("Hello, ini contoh PDF!", 10, 10);
+    pdf.save("example.pdf");
+      });
+  </script>
 </body>
 </html>
