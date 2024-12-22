@@ -29,18 +29,3 @@ document.getElementById("calculateBtn").addEventListener("click", () => {
  }
  tbody.appendChild(row);
 });
-
-// Fitur Download PDF
-document.getElementById("downloadPdfBtn").addEventListener("click", () => {
-  const table = document.getElementById("resultTable");
-  const rows = Array.from(table.rows).map(row => Array.from(row.cells).map(cell => cell.textContent));
-
-  const doc = new jsPDF();
-  doc.text("Hasil Perhitungan Max Bid", 10, 10);
-  doc.autoTable({
-    head: [rows[0]],
-    body: rows.slice(1),
-  });
-
-  doc.save("max_bid_results.pdf");
-});
