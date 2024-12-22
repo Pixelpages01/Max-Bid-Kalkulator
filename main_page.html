@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Max Bid Calculator</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -44,18 +44,6 @@
  		 <tbody></tbody>
   </table>
   <button id="downloadPdfBtn">Unduh</button>
-  <script>
-    document.getElementById("downloadPdfBtn").addEventListener("click", () => {
-  const table = document.getElementById("resultTable");
-  const rows = Array.from(table.rows).map(row => Array.from(row.cells).map(cell => cell.textContent));
-
-  const pdf = new jsPDF();
-  pdf.text("Hasil Perhitungan Max Bid", 10, 10);
-  pdf.autoTable({
-    head: [rows[0]],
-    body: rows.slice(1);
-  pdf.save("Max_Bid_Result.pdf");
-  });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
