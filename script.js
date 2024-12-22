@@ -29,3 +29,27 @@ document.getElementById("calculateBtn").addEventListener("click", () => {
  }
  tbody.appendChild(row);
 });
+ // Membuat fitur download PDF
+document.getElementById("downloadPdfBtn").addEventListener("click", () => {
+  // Pastikan jsPDF diakses melalui window.jspdf
+  const { jsPDF } = window.jspdf;
+
+  // Ambil tabel dari HTML
+  const table = document.getElementById("resultTable");
+  const rows = Array.from(table.rows).map(row =>
+    Array.from(row.cells).map(cell => cell.textContent)
+  );
+
+  // Buat dokumen PDF
+  const pdf = new jsPDF();
+  pdf.text("Hasil Perhitungan Max Bid", 10, 10);
+
+  // Tambahkan tabel ke PDF menggunakan plugin autoTable
+  pdf.autoTable({
+    head: [rows[0]], // Baris pertama sebagai header
+    body: rows.slice(1), // Baris berikutnya sebagai isi
+  });
+
+  // Simpan file PDF
+  pdf.save("max_bid_results.pdf");
+});
